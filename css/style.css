@@ -1,40 +1,56 @@
 @charset "UTF-8";
 
-
 html {
-    /* height: 100%; */
+  /* height: 100%; */
 }
 
 body {
-    /* height: 100%; */
-    background-color: hsl(0, 0%, 96%);
+  /* height: 100%; */
+  background-color: hsl(0, 0%, 96%);
 }
 
 .hero {
-    height: 100vh;
+  min-height: 100vh;
 }
 .hero-header {
-    height: 5vh;
+  height: 5vh;
 }
 .hero-body {
-    height: 95vh;
+  height: 95vh;
 }
 /* color */
 .is-dark {
-    background-color: black;
-    /* color: aliceblue; */
+  background-color: black;
+  /* color: aliceblue; */
 }
 
 .is-blue {
-    background-color: aquamarine;
+  background-color: aquamarine;
 }
 
 .is-green {
-    background-color: greenyellow;
+  background-color: greenyellow;
 }
 
-.container { 
-    display: flex; 
-    /* align-items: center; */
-    /* flex-direction: column; */
+.container {
+  display: flex;
+  /* align-items: center; */
+  /* flex-direction: column; */
+}
+
+/* Main Page */
+/* 円形 */
+.pie {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  background: yellowgreen;
+  /* background-image: linear-gradient(to right, transparent 50%, #655 0); */
+}
+
+/* Progress Bar */
+.progress-bar {
+  width: 100%;
+  height: 10px;
+  background-color: violet;
 }
