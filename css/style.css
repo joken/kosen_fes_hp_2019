@@ -1,13 +1,22 @@
 @charset "UTF-8";
 
+* {
+  --red: #E3170A;
+  --white: #FDFFFC;
+  --black: #3C3744;
+  --green: #8EA604;
+}
+
 html {
   /* height: 100%; */
+  color: --var(--black);
 }
 
 body {
   /* height: 100%; */
-  background-color: hsl(0, 0%, 96%);
+  background-color: var(--white);
 }
+
 
 .hero {
   min-height: 100vh;
@@ -20,16 +29,16 @@ body {
 }
 /* color */
 .is-dark {
-  background-color: black;
+  background-color: var(--black);
   /* color: aliceblue; */
 }
 
 .is-blue {
-  background-color: aquamarine;
+  background-color: #2364AA;
 }
 
 .is-green {
-  background-color: greenyellow;
+  background-color: var(--green);
 }
 
 .container {

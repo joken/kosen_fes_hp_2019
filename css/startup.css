@@ -1,3 +1,5 @@
+
+
 .c-circle {
   width: 300px;
   padding-bottom: 300px;
@@ -16,39 +18,64 @@
 .c-circle__1,
 .c-circle__2,
 .c-circle__3,
-.c-circle__4 {
+.c-circle__4,
+.c-circle__5,
+.c-circle__6,
+.c-circle__7 {
   fill: transparent;
   stroke-width: 31.8309886184;
   stroke-dashoffset: 25;
+  --animation-time: 5s;
 }
 .c-circle__1 {
-  animation: one 5s infinite;
-  /* stroke-dasharray: 25, 75, 0, 0; */
-  stroke: blue;
+  animation: one var(--animation-time);
+  stroke-dasharray: calc(100/7), calc(100/7*6), 0, 0;
+  stroke: #E24E1B;
 }
 .c-circle__2 {
-  animation: two 5s infinite;
-  /* stroke-dasharray: 0, 25, 75, 0; */
-  stroke: #6666ff;
+  animation: two var(--animation-time);
+  stroke-dasharray: 0, calc(100/7), calc(100/7), calc(100/7*5);
+  stroke: #FF9F1C;
 }
+
 .c-circle__3 {
-  animation: three 5s infinite;
-  /* stroke-dasharray: 0, 50, 50, 25; */
-  stroke: #9999ff;
+  animation: three var(--animation-time);
+  stroke-dasharray: 0, calc(100/7*2), calc(100/7), calc(100/7*4);
+  stroke: #73BFB8;
 }
+
 .c-circle__4 {
-  animation: four 5s infinite;
-  /* stroke-dasharray: 0, 75, 25, 0; */
-  stroke: #ccccff;
+  animation: four var(--animation-time) ;
+  stroke-dasharray: 0, calc(100/7*3), calc(100/7), calc(100/7*3);
+  stroke: #3DA5D9;
 }
+
+.c-circle__5 {
+  animation: five var(--animation-time) ;
+  stroke-dasharray:  0, calc(100/7*4), calc(100/7), calc(100/7*2);
+  stroke: #2364AA;
+}
+
+.c-circle__6 {
+  animation: six var(--animation-time) ;
+  stroke-dasharray: 0, calc(100/7*5), calc(100/7), calc(100/7*1);
+  stroke: var(--green);
+}
+/* 9999ff*/
+.c-circle__7 {
+  animation: seven var(--animation-time);
+  stroke-dasharray: 0, calc(100/7*6), calc(100/7), 0;
+  stroke: #8D3B72;
+}
+
 
 @keyframes one {
   0% {
     stroke-dasharray: 0, 0, 0, 100;
   }
-  50%,
+  25%,
   100% {
-    stroke-dasharray: 25, 75, 0, 0;
+    stroke-dasharray: 14.285, 85.715, 0, 0;
   }
 }
 
@@ -58,7 +85,7 @@
   }
   50%,
   100% {
-    stroke-dasharray: 0, 25, 75, 0;
+    stroke-dasharray: 0, 14.285, 14.285, 71.425;
   }
 }
 
@@ -68,7 +95,7 @@
   }
   50%,
   100% {
-    stroke-dasharray: 0, 50, 50, 25;
+    stroke-dasharray: 0, 28.57, 14.285, 57.14;
   }
 }
 @keyframes four {
@@ -77,6 +104,37 @@
   }
   50%,
   100% {
-    stroke-dasharray: 0, 75, 25, 0;
+    stroke-dasharray: 0, 42.855, 14.285, 42.86;
+  }
+}
+
+@keyframes five {
+  0% {
+    stroke-dasharray: 0, 0, 0, 100;
+  }
+  50%,
+  100% {
+    stroke-dasharray:  0, 57.14, 14.285, 28.57;
+  }
+}
+
+@keyframes six {
+  0% {
+    stroke-dasharray: 0, 0, 0, 100;
+  }
+  50%,
+  100% {
+    stroke-dasharray: 0, 71.425, 14.285, 14.285;
+  }
+}
+
+@keyframes seven {
+  0% {
+    stroke-dasharray: 0, 0, 0, 100;
+  }
+  50%,
+  100% {
+    /* stroke-dasharray: 0, calc(100/7*6), calc(100/7), 0; */
+    stroke-dasharray: 0, 85.715, 14.285, 0;
   }
 }
