@@ -5,6 +5,11 @@
   --white: #FDFFFC;
   --black: #3C3744;
   --green: #8EA604;
+  --orange: #FF9F1C;
+  --blue: #2364AA;
+
+  /* 余白設定 */
+  margin: 0;
 }
 
 html {
@@ -38,13 +43,28 @@ body {
 }
 
 .is-blue {
-  background-color: #2364AA;
+  background-color: var(--blue);
 }
 
 .is-green {
   background-color: var(--green);
 }
 
+.is-white {
+  background-color: var(--white);
+}
+
+.is-red {
+  background-color: var(--red);
+}
+
+.is-orange {
+  background-color: var(--orange);
+}
+
+
+
+/* contents */
 .container {
   display: flex;
   /* align-items: center; */
@@ -66,4 +86,10 @@ body {
   width: 100%;
   height: 10px;
   background-color: violet;
+}
+
+
+/* font */
+.title {
+  font-size: 10vw;
 }
