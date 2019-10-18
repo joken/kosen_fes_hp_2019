@@ -1,5 +1,3 @@
-
-
 .c-circle {
   width: 300px;
   padding-bottom: 300px;
@@ -29,45 +27,46 @@
 }
 .c-circle__1 {
   animation: one var(--animation-time);
-  stroke-dasharray: calc(100/7), calc(100/7*6), 0, 0;
-  stroke: #E24E1B;
+  -webkit-animation: one var(--animation-time);
+  stroke-dasharray: 14.285, 85.715, 0, 0;
+  stroke: #e24e1b;
 }
 .c-circle__2 {
   animation: two var(--animation-time);
-  stroke-dasharray: 0, calc(100/7), calc(100/7), calc(100/7*5);
-  stroke: #FF9F1C;
+  -webkit-animation: two var(--animation-time);
+  stroke-dasharray: 0, 14.285, 14.285, 71.425;
+  stroke: #ff9f1c;
 }
 
 .c-circle__3 {
   animation: three var(--animation-time);
-  stroke-dasharray: 0, calc(100/7*2), calc(100/7), calc(100/7*4);
-  stroke: #73BFB8;
+  stroke-dasharray: 0, 28.57, 14.285, 57.14;
+  stroke: #73bfb8;
 }
 
 .c-circle__4 {
-  animation: four var(--animation-time) ;
-  stroke-dasharray: 0, calc(100/7*3), calc(100/7), calc(100/7*3);
-  stroke: #3DA5D9;
+  animation: four var(--animation-time);
+  stroke-dasharray: 0, 42.855, 14.285, 42.86;
+  stroke: #3da5d9;
 }
 
 .c-circle__5 {
-  animation: five var(--animation-time) ;
-  stroke-dasharray:  0, calc(100/7*4), calc(100/7), calc(100/7*2);
-  stroke: #2364AA;
+  animation: five var(--animation-time);
+  stroke-dasharray: 0, 57.14, 14.285, 28.57;
+  stroke: #2364aa;
 }
 
 .c-circle__6 {
-  animation: six var(--animation-time) ;
-  stroke-dasharray: 0, calc(100/7*5), calc(100/7), calc(100/7*1);
+  animation: six var(--animation-time);
+  stroke-dasharray: 0, 71.425, 14.285, 14.285;
   stroke: var(--green);
 }
 /* 9999ff*/
 .c-circle__7 {
   animation: seven var(--animation-time);
-  stroke-dasharray: 0, calc(100/7*6), calc(100/7), 0;
-  stroke: #8D3B72;
+  stroke-dasharray: 0, 85.715, 14.285, 0;
+  stroke: #8d3b72;
 }
-
 
 @keyframes one {
   0% {
@@ -114,7 +113,7 @@
   }
   50%,
   100% {
-    stroke-dasharray:  0, 57.14, 14.285, 28.57;
+    stroke-dasharray: 0, 57.14, 14.285, 28.57;
   }
 }
 
