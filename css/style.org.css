@@ -1,0 +1,32 @@
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    background-color: hsl(0, 0%, 96%);
+}
+
+.is-icon{
+    height: 80px;
+    width: 80px;
+}
+
+*{
+    overflow-y: hidden;
+}
+
+.boel{
+    stroke:#000; 
+    stroke-width:1px; 
+    fill:transparent; 
+    stroke-dasharray:1425px; 
+    stroke-dashoffset:1425px; 
+    animation:anim 2s ease-in 0s forwards;
+}
+@keyframes anim{
+    0%{stroke-dashoffset:1425px;}
+    30%{fill:transparent;}
+    60%{stroke-dashoffset:0;}
+    100%{stroke-dashoffset:0; fill:#000000;}
+}

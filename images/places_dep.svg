@@ -1,0 +1,187 @@
+<svg width="1266" height="679" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" overflow="hidden">
+    <defs>
+        <clipPath id="clip0">
+            <path d="M8 25 1274 25 1274 704 8 704Z" fill-rule="evenodd" clip-rule="evenodd"/>
+        </clipPath>
+        <image width="96" height="90" xlink:href="data:image/png;base64,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" preserveAspectRatio="none" id="img1">
+        </image>
+        <clipPath id="clip2">
+            <path d="M0 0 23.6344 0 23.6344 46 0 46Z" fill-rule="evenodd" clip-rule="evenodd"/>
+        </clipPath>
+        <clipPath id="clip3">
+            <path d="M0 0 24 0 24 46.3679 0 46.3679Z" fill-rule="evenodd" clip-rule="evenodd"/>
+        </clipPath>
+        <clipPath id="clip4">
+            <path d="M0 0 49.0667 0 49.0667 46 0 46Z" fill-rule="evenodd" clip-rule="evenodd"/>
+        </clipPath>
+        <clipPath id="clip5">
+            <path d="M0 0 49 0 49 45.9375 0 45.9375Z" fill-rule="evenodd" clip-rule="evenodd"/>
+        </clipPath>
+    </defs>
+
+    <g clip-path="url(#clip0)" transform="translate(-8 -25)">
+        <path d="M9.88982 194.5 609.5 194.5 609.5 699.794 422.69 702.5C421.866 583.514 421.91 490.838 421.087 371.852L9.88982 369.703C9.88982 294.996 9.01325 298.125 9.88982 194.5Z" stroke="#000000" stroke-miterlimit="8" fill="#E7E6E6" fill-rule="evenodd"/>
+        <path d="M670.89 194.5 1270.5 194.5 1270.5 699.773C1208.23 700.674 1144.94 702.598 1082.67 703.5 1081.84 584.519 1082.4 491.336 1081.58 372.355L670.89 369.696C670.89 294.992 670.013 298.121 670.89 194.5Z" stroke="#000000" stroke-miterlimit="8" fill="#E7E6E6" fill-rule="evenodd"/>
+        <text font-weight="400" font-size="48" transform="translate(296.085 171)">
+        
+        3<tspan x="26.6667" y="0">
+        階</tspan>
+
+        <tspan x="635.905" y="-10">
+        2</tspan>
+        
+        <tspan x="662.571" y="-10">
+        階</tspan>
+        </text>
+        
+        <g id="pK">
+            <rect x="0" y="0" width="68" height="81" stroke="#000000" stroke-width="4" stroke-miterlimit="8" fill="#FFFFFF" transform="matrix(-1 -8.74228e-08 -8.74228e-08 1 215 196)"/>
+            <text font-weight="700" font-size="32" transform="translate(169.951 246)">
+            K</text>
+        </g>
+
+        <g id="pL">
+            <rect x="0" y="0" width="68" height="81" stroke="#000000" stroke-width="4" stroke-miterlimit="8" fill="#FFFFFF" transform="matrix(-1 -8.74228e-08 -8.74228e-08 1 285 196)"/>
+            <text font-weight="700" font-size="32" transform="translate(240.711 246)">
+            L</text>
+        </g>
+
+        <g id="pM">
+            <rect x="0" y="0" width="68" height="81" stroke="#000000" stroke-width="4" stroke-miterlimit="8" fill="#FFFFFF" transform="matrix(-1 -8.74228e-08 -8.74228e-08 1 354 196)"/>
+            <text font-weight="700" font-size="32" transform="translate(304.559 246)">
+            M</text>
+        </g>
+
+        <g id="pN">
+            <rect x="0" y="0" width="68" height="81" stroke="#000000" stroke-width="4" stroke-miterlimit="8" fill="#FFFFFF" transform="matrix(-1 -8.74228e-08 -8.74228e-08 1 422 196)"/>
+            <text font-weight="700" font-size="32" transform="translate(375.513 246)">
+            N</text>
+        </g>
+
+        <g id="pA">
+            <rect x="0" y="0" width="87" height="124" stroke="#000000" stroke-width="4" stroke-miterlimit="8" fill="#FFFFFF" transform="matrix(-1 -8.74228e-08 -8.74228e-08 1 759 196)"/>
+            <text font-weight="700" font-size="32" transform="translate(704.276 268)">
+            A</text>
+        </g>
+
+        <g id="pB">
+            <rect x="0" y="0" width="68" height="78" stroke="#000000" stroke-width="4" stroke-miterlimit="8" fill="#FFFFFF" transform="matrix(-1 -8.74228e-08 -8.74228e-08 1 864 196)"/>
+            <text font-weight="700" font-size="32" transform="translate(818.515 245)">
+            B</text>
+        </g>
+
+        <g id="pC">
+            <rect x="0" y="0" width="68" height="78" stroke="#000000" stroke-width="4" stroke-miterlimit="8" fill="#FFFFFF" transform="matrix(-1 -8.74228e-08 -8.74228e-08 1 933 196)"/>
+            <text font-weight="700" font-size="32" transform="translate(887.446 245)">
+            C</text>
+        </g>
+
+        <g id="pD">
+            <rect x="0" y="0" width="68" height="78" stroke="#000000" stroke-width="4" stroke-miterlimit="8" fill="#FFFFFF" transform="matrix(-1 -8.74228e-08 -8.74228e-08 1 1002 196)"/>
+            <text font-weight="700" font-size="32" transform="translate(955.711 245)">
+            D</text>
+        </g>
+
+        <g id="pG">
+            <rect x="0" y="0" width="93" height="78" stroke="#000000" stroke-width="4" stroke-miterlimit="8" fill="#FFFFFF" transform="matrix(-1 -8.74228e-08 -8.74228e-08 1 1268 429)"/>
+            <text font-weight="700" font-size="32" transform="translate(1209.12 478)">
+            G</text>
+        </g>
+
+        <g id="pF">
+            <rect x="0" y="0" width="93" height="78" stroke="#000000" stroke-width="4" stroke-miterlimit="8" fill="#FFFFFF" transform="matrix(-1 -8.74228e-08 -8.74228e-08 1 1268 350)"/>
+            <text font-weight="700" font-size="32" transform="translate(1211.38 399)">
+            F</text>
+        </g>
+
+        <g id="pE">
+            <rect x="0" y="0" width="93" height="78" stroke="#000000" stroke-width="4" stroke-miterlimit="8" fill="#FFFFFF" transform="matrix(-1 -8.74228e-08 -8.74228e-08 1 1268 273)"/>
+            <text font-weight="700" font-size="32" transform="translate(1211.28 322)">
+            E</text>
+        </g>
+        <rect x="0" y="0" width="93" height="78" stroke="#000000" stroke-width="4" stroke-miterlimit="8" fill="#FFFFFF" transform="matrix(-1 -8.74228e-08 -8.74228e-08 1 1268 195)"/>
+        <text font-weight="700" font-size="32" transform="translate(1189.56 244)">
+        本部</text>
+
+        <g id="pH">
+            <rect x="0" y="0" width="187" height="112" stroke="#000000" stroke-width="4" stroke-miterlimit="8" fill="#FFFFFF" transform="matrix(-1 -8.74228e-08 -8.74228e-08 1 1270 590)"/>
+            <text font-weight="700" font-size="32" transform="translate(1163.89 656)">
+            H</text>
+        </g>
+
+        <g clip-path="url(#clip2)" transform="matrix(1.01547 0 -0 1 391 324)">
+        <use width="100%" height="100%" xlink:href="#img1" transform="scale(0.511111 0.511111)">
+        </use>
+        </g>
+        <path d="M390.5 323.5 415.5 323.5 415.5 370.5 390.5 370.5Z" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" fill="none" fill-rule="evenodd"/>
+        <g clip-path="url(#clip3)" transform="matrix(1 0 -0 1.01363 1049 325)">
+        <use width="100%" height="100%" xlink:href="#img1" transform="scale(0.515198 0.515198)">
+        </use>
+        </g>
+        <path d="M1048.5 324.5 1073.5 324.5 1073.5 372.5 1048.5 372.5Z" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" fill="none" fill-rule="evenodd"/>
+        <rect x="421.5" y="372.5" width="74" height="62" stroke="#000000" stroke-miterlimit="8" fill="#F2F2F2"/>
+        <path d="M0 0 55.4704 0.000104987" stroke="#000000" stroke-width="2" stroke-miterlimit="8" fill="#F2F2F2" fill-rule="evenodd" transform="matrix(-1 -8.74228e-08 -8.74228e-08 1 494.47 403)"/>
+        <path d="M0 0 0.684619 62.7127" stroke="#000000" stroke-miterlimit="8" fill="#F2F2F2" fill-rule="evenodd" transform="matrix(1 -0 -0 -1 482.5 435.213)"/>
+        <path d="M0 0 0.684619 62.7127" stroke="#000000" stroke-miterlimit="8" fill="#F2F2F2" fill-rule="evenodd" transform="matrix(1 -0 -0 -1 471.5 435.213)"/>
+        <path d="M0 0 0.684619 62.7127" stroke="#000000" stroke-miterlimit="8" fill="#F2F2F2" fill-rule="evenodd" transform="matrix(1 -0 -0 -1 459.5 435.213)"/>
+        <path d="M450.5 403.856 450.5 372.5" stroke="#000000" stroke-miterlimit="8" fill="#F2F2F2" fill-rule="evenodd"/>
+        <path d="M439.709 403.856 439.5 372.5" stroke="#000000" stroke-miterlimit="8" fill="#F2F2F2" fill-rule="evenodd"/>
+        <rect x="1082.5" y="372.5" width="74" height="63" stroke="#000000" stroke-miterlimit="8" fill="#F2F2F2"/>
+        <path d="M0 0 55.4704 0.000104987" stroke="#000000" stroke-width="2" stroke-miterlimit="8" fill="#F2F2F2" fill-rule="evenodd" transform="matrix(-1 -8.74228e-08 -8.74228e-08 1 1155.47 404)"/>
+        <path d="M0 0 0.684619 62.7127" stroke="#000000" stroke-miterlimit="8" fill="#F2F2F2" fill-rule="evenodd" transform="matrix(1 -0 -0 -1 1143.5 435.213)"/>
+        <path d="M0 0 0.684619 62.7127" stroke="#000000" stroke-miterlimit="8" fill="#F2F2F2" fill-rule="evenodd" transform="matrix(1 -0 -0 -1 1132.5 435.213)"/>
+        <path d="M0 0 0.684619 62.7127" stroke="#000000" stroke-miterlimit="8" fill="#F2F2F2" fill-rule="evenodd" transform="matrix(1 -0 -0 -1 1120.5 435.213)"/>
+        <path d="M1111.5 403.856 1111.5 372.5" stroke="#000000" stroke-miterlimit="8" fill="#F2F2F2" fill-rule="evenodd"/>
+        <path d="M1100.71 403.856 1100.5 372.5" stroke="#000000" stroke-miterlimit="8" fill="#F2F2F2" fill-rule="evenodd"/>
+        <rect x="111.5" y="307.5" width="74" height="63" stroke="#000000" stroke-miterlimit="8" fill="#F2F2F2"/>
+        <path d="M0 0 55.4704 0.000104987" stroke="#000000" stroke-width="2" stroke-miterlimit="8" fill="none" fill-rule="evenodd" transform="matrix(1 -0 -0 -1 111 338)"/>
+        <path d="M0 0 0.684619 62.7127" stroke="#000000" stroke-miterlimit="8" fill="none" fill-rule="evenodd" transform="matrix(-1 -8.74228e-08 -8.74228e-08 1 124.185 307.5)"/>
+        <path d="M0 0 0.684619 62.7127" stroke="#000000" stroke-miterlimit="8" fill="none" fill-rule="evenodd" transform="matrix(-1 -8.74228e-08 -8.74228e-08 1 136.185 307.5)"/>
+        <path d="M0 0 0.684619 62.7127" stroke="#000000" stroke-miterlimit="8" fill="none" fill-rule="evenodd" transform="matrix(-1 -8.74228e-08 -8.74228e-08 1 147.185 307.5)"/>
+        <path d="M155.5 338.5 155.5 369.856" stroke="#000000" stroke-miterlimit="8" fill="none" fill-rule="evenodd"/>
+        <path d="M167.5 338.5 167.709 369.856" stroke="#000000" stroke-miterlimit="8" fill="none" fill-rule="evenodd"/>
+        <rect x="784.5" y="307.5" width="74" height="63" stroke="#000000" stroke-miterlimit="8" fill="#F2F2F2"/>
+        <path d="M0 0 55.4704 0.000104987" stroke="#000000" stroke-width="2" stroke-miterlimit="8" fill="#F2F2F2" fill-rule="evenodd" transform="matrix(1 -0 -0 -1 784 338)"/>
+        <path d="M0 0 0.684619 62.7127" stroke="#000000" stroke-miterlimit="8" fill="#F2F2F2" fill-rule="evenodd" transform="matrix(-1 -8.74228e-08 -8.74228e-08 1 797.185 307.5)"/>
+        <path d="M0 0 0.684619 62.7127" stroke="#000000" stroke-miterlimit="8" fill="#F2F2F2" fill-rule="evenodd" transform="matrix(-1 -8.74228e-08 -8.74228e-08 1 809.185 307.5)"/>
+        <path d="M0 0 0.684619 62.7127" stroke="#000000" stroke-miterlimit="8" fill="#F2F2F2" fill-rule="evenodd" transform="matrix(-1 -8.74228e-08 -8.74228e-08 1 820.185 307.5)"/>
+        <path d="M828.5 338.5 828.5 369.856" stroke="#000000" stroke-miterlimit="8" fill="#F2F2F2" fill-rule="evenodd"/>
+        <path d="M839.5 338.5 839.709 369.856" stroke="#000000" stroke-miterlimit="8" fill="#F2F2F2" fill-rule="evenodd"/>
+        <rect x="422" y="434" width="187" height="268" fill="#FFC000" fill-opacity="0.501961"/>
+        <text fill="#FFFFFF" font-weight="400" font-size="24" transform="translate(443.23 576)">
+        立ち入り禁止</text>
+        <rect x="1194.5" y="514.5" width="74" height="63" stroke="#000000" stroke-miterlimit="8" fill="#F2F2F2"/>
+        <path d="M0 0 55.4704 0.000104987" stroke="#000000" stroke-width="2" stroke-miterlimit="8" fill="#F2F2F2" fill-rule="evenodd" transform="matrix(1 -0 -0 -1 1194 546)"/>
+        <path d="M0 0 0.684619 62.7127" stroke="#000000" stroke-miterlimit="8" fill="#F2F2F2" fill-rule="evenodd" transform="matrix(-1 -8.74228e-08 -8.74228e-08 1 1207.18 514.5)"/>
+        <path d="M0 0 0.684619 62.7127" stroke="#000000" stroke-miterlimit="8" fill="#F2F2F2" fill-rule="evenodd" transform="matrix(-1 -8.74228e-08 -8.74228e-08 1 1218.18 514.5)"/>
+        <path d="M0 0 0.684619 62.7127" stroke="#000000" stroke-miterlimit="8" fill="#F2F2F2" fill-rule="evenodd" transform="matrix(-1 -8.74228e-08 -8.74228e-08 1 1230.18 514.5)"/>
+        <path d="M1238.5 546.5 1238.5 577.856" stroke="#000000" stroke-miterlimit="8" fill="#F2F2F2" fill-rule="evenodd"/>
+        <path d="M1249.5 546.5 1249.71 577.856" stroke="#000000" stroke-miterlimit="8" fill="#F2F2F2" fill-rule="evenodd"/>
+        <text font-weight="400" font-size="48" transform="translate(93.6634 84)">
+        校内地図</text>
+
+        <g id="pI">
+            <rect x="0" y="0" width="60" height="78" stroke="#000000" stroke-width="4" stroke-miterlimit="8" fill="#FFFFFF" transform="matrix(-1 -8.74228e-08 -8.74228e-08 1 782 370)"/>
+            <text font-weight="700" font-size="43" transform="translate(745.268 422)">
+            I</text>
+        </g>
+        <g clip-path="url(#clip4)" transform="matrix(1.01902 0 -0 1 10 323)">
+            <use width="100%" height="100%" xlink:href="#img1" transform="scale(0.511111 0.511111)">
+            </use>
+        </g>
+        
+        <path d="M9.5 322.5 60.5 322.5 60.5 369.5 9.5 369.5Z" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" fill="none" fill-rule="evenodd"/>
+        
+        <g clip-path="url(#clip5)" transform="matrix(1 0 -0 1.02313 672 322)">
+            <use width="100%" height="100%" xlink:href="#img1" transform="scale(0.510417 0.510417)">
+            </use>
+        </g>
+
+        <path d="M671.5 321.5 721.5 321.5 721.5 369.5 671.5 369.5Z" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" fill="none" fill-rule="evenodd"/>
+        
+        <g id="pJ">
+        <rect x="0" y="0" width="87" height="125" stroke="#000000" stroke-width="4" stroke-miterlimit="8" fill="#FFFFFF" transform="matrix(-1 -8.74228e-08 -8.74228e-08 1 99 196)"/>
+        <text font-weight="700" font-size="32" transform="translate(49.1425 268)">J</text>
+        </g>
+    </g>
+</svg>
