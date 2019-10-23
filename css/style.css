@@ -1,12 +1,14 @@
 @charset "UTF-8";
 
-* {
+:root {
   --red: #e3170a;
+  --red_dark: #c0392b;
   --white: #fdfffc;
   --black: #3c3744;
   --green: #8ea604;
   --orange: #ff9f1c;
   --blue: #2364aa;
+  --purple: #8e44ad;
 
   /* 余白設定 */
   /* margin: 0; */
@@ -48,28 +50,50 @@ body {
   background-color: var(--red);
 }
 
+.is-purple {
+  background-color: var(--purple);
+}
+
 .is-orange {
   background-color: var(--orange);
 }
 
-/* Main Page */
-/* 円形 */
-.pie {
-  height: 150px;
-  width: 150px;
-  border-radius: 50%;
-  background: yellowgreen;
-  /* background-image: linear-gradient(to right, transparent 50%, #655 0); */
+.is-red-dark {
+  background-color: var(--red_dark);
 }
 
-/* Progress Bar */
-.progress-bar {
+.has-text-black {
+  color: var(--black);
+}
+
+.has-text-white {
+  color: var(--white);
+}
+
+.has-text-orange {
+  color: var(--orange);
+}
+.table-title {
+  margin-top: 15px;
+  color: var(--black);
+}
+
+.t-body {
+  background-color: var(--orange);
+}
+
+.card {
+  margin-bottom: 10px;
   width: 100%;
-  height: 10px;
-  background-color: violet;
+  color: var(--grai);
 }
 
-/* .main_title {
-  font-size: 30px;
-  text-align: center;
-} */
+.card-title {
+  text-shadow: 0.5px 0.5px 0.5px var(--grai);
+  /* text-shadow: 1px 1px 0 var(--cream); */
+}
+
+
+svg {
+  background-color: var(--white);
+}

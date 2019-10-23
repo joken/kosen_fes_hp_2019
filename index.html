@@ -1,84 +1,159 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>奈良高専祭2019</title>
 
-    <!-- reset CSS -->
-    <!-- <link rel="stylesheet" href="./css/normalize.css" /> -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>奈良高専祭2019</title>
 
-    <!-- Bulma -->
-    <link rel="stylesheet" href="./css/bulma.css" />
+  <!-- reset CSS -->
+  <!-- <link rel="stylesheet" href="./css/normalize.css" /> -->
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="./css/style.css" />
-    <!-- <link rel="stylesheet" href="./css/startup.css" /> -->
+  <!-- Bulma -->
+  <link rel="stylesheet" href="./css/bulma.css" />
 
-    <!-- Animate.css -->
-    <link rel="stylesheet" href="./css/animate.css" />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./css/style.css" />
+  <!-- <link rel="stylesheet" href="./css/startup.css" /> -->
 
-    <!-- Vue.js -->
-    <script src="js/vue.js"></script>
-  </head>
+  <!-- Animate.css -->
+  <link rel="stylesheet" href="./css/animate.css" />
 
-  <body>
-    <main>
-      <div class="hero is-success is-fullheight">
-        <nav class="navbar">
-          <div class="container">
-            <nav
-              class="navbar is-success"
-              role="navigation"
-              aria-label="main navigation"
-            >
-              <div class="navbar-brand">
-                <a class="navbar-item" href="#">
-                  <p>奈良高専祭2019</p>
-                </a>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://kit-pro.fontawesome.com/releases/v5.9.0/css/pro.min.css">
 
-                <a
-                  role="button"
-                  class="navbar-burger burger"
-                  aria-label="menu"
-                  aria-expanded="false"
-                  data-target="navbar_menu"
-                >
-                  <span aria-hidden="true"></span>
-                  <span aria-hidden="true"></span>
-                  <span aria-hidden="true"></span>
-                </a>
-              </div>
+  <!-- Google Fonts Japanese -->
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP" rel="stylesheet" />
 
-              <div id="navbar_menu" class="navbar-menu">
-                <div class="navbar-end">
-                  <a class="navbar-item">
-                    about
-                  </a>
+  <!-- Vue.js -->
+  <script src="js/vue.js"></script>
+</head>
 
-                  <a class="navbar-item">
-                    企画
-                  </a>
-                </div>
-              </div>
-            </nav>
+<body>
+
+  <nav class="navbar is-fixed-top" id="nav" style="opacity: 0.8;">
+    <div class="container">
+      <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="#">
+            <p>奈良高専祭2019</p>
+          </a>
+
+          <div class="navbar-burger" @click="showNav = !showNav" :class="{ 'is-active': showNav }">
+            <span></span>
+            <span></span>
+            <span></span>
           </div>
-        </nav>
+        </div>
 
+        <div class="navbar-menu" :class="{ 'is-active': showNav }">
+          <div class="navbar-end">
+            <a class="navbar-item" href="#shop">
+              模擬店
+            </a>
+
+            <a class="navbar-item" href="#dep">
+              科展
+            </a>
+            <a class="navbar-item" href="#plan">
+              企画ステージ
+            </a>
+            <a class="navbar-item" href="#access">
+              アクセス
+            </a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </nav>
+  <main id="app">
+    <div class="hero is-success is-fullheight">
+      <div class="hero-body">
+        <div class="container has-text-centered">
+          <h1 class="title">
+            第53回奈良高専祭
+          </h1>
+          <h2 class="subtitle">未来を彩る五色の技術へ</h2>
+
+          <p class="has-text-orange" style="font-size: 20px">11月2日(土) 10:00 ~ 16:00</p>
+          <p class="has-text-orange" style="font-size: 20px">&emsp;&emsp;3日(日) 10:00 ~ 15:30</p>
+
+          <br><br>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="hero" id="shop">
+      <div class="hero is-orange is-fullheight">
         <div class="hero-body">
-          <div class="container has-text-centered">
-            <h1 class="title">
-              第53回奈良高専祭
+          <div class="container">
+            <h1 class="title has-text-black">
+              模擬店
             </h1>
-            <h2 class="subtitle">未来を彩る五色の技術へ</h2>
+
+            <!-- ここから -->
+            <div class="">
+              <div class="columns is-multiline is-tablet is-fullhd">
+                <div class="column is-4" v-for="(value) in groups">
+                  <article class="message">
+                    <div class="message-header">
+                      <p>{{ value.place }}</p>
+                    </div>
+                    <div class="message-body">
+                      <p class="title">{{ value.group }}</p>
+                      <p class="subtitle">{{ value.product }}</p>
+                      <div class="content">
+                        <a v-on:click="open(value.map, value.place)">>場所</a>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero" id="dep">
+      <div class="hero is-blue is-fullheight">
+        <div class="hero-body">
+          <div class="container">
+            <h1 class="title has-text-white">
+              科展
+            </h1>
+            <!-- ここから -->
+            <div class="">
+              <div class="columns is-multiline is-tablet is-fullhd" id="dev">
+                <div class="column is-4" v-for="(value) in dep">
+                  <article class="message">
+                    <div class="message-header">
+                      <p>{{ value.place }}</p>
+                    </div>
+                    <div class="message-body">
+                      <p class="title">{{ value.group }}</p>
+                      <p class="subtitle">{{ value.product }}</p>
+                      <div class="content">
+                        <a v-on:click="open(value.map, value.place)">>場所</a>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
-      <div class="hero">
-        <div class="hero is-orange is-fullheight">
+      <!-- 企画ステージ -->
+      <div class="hero" id="plan">
+        <div class="hero is-purple is-fullheight">
           <div class="hero-body">
             <div class="container">
+              <h1 class="title has-text-white">
+                企画ステージ
+              </h1>
               <div class="tile is-ancestor">
                 <div class="tile is-vertical">
                   <div class="tile">
@@ -88,68 +163,641 @@
               </div>
 
               <!-- ここから -->
-              <div class="">
-                <div class="columns is-multiline is-tablet is-fullhd" id="shop">
-                  <div v-for="(value) in groups">
-                    <div class="column">
-                      <article class="message">
-                        <div class="message-header">
-                          <p>{{ value.place }}</p>
-                        </div>
-                        <div class="message-body">
-                          <p class="title">{{ value.group }}</p>
-                          <p class="subtitle">{{ value.product }}</p>
-                          <div class="content"></div>
-                        </div>
-                      </article>
-                    </div>
+              <article class="message">
+                <div class="message-header">
+                  １日目（土曜日）
+                </div>
+                <div class="message-body">
+                  <div class="content">
+                    <table class="">
+                      <thead class="t-body">
+                        <tr>
+                          <th>時間</th>
+                          <th>企画</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr v-for="(value) in plan.first">
+                          <td> {{ value.time }}~ </td>
+                          <td> {{ value.title }} </td>
+                        </tr>
+                      </tbody>
+                    </table>
                   </div>
                 </div>
-              </div>
+              </article>
+              <article class="message">
+                <div class="message-header">
+                  ２日目（日曜日）
+                </div>
+                <div class="message-body">
+                  <div class="content">
+                    <table class="">
+                      <thead class="t-body">
+                        <tr>
+                          <th>時間</th>
+                          <th>企画</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr v-for="(value) in plan.second">
+                          <td> {{ value.time }}~ </td>
+                          <td> {{ value.title }} </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </article>
+
             </div>
           </div>
         </div>
       </div>
 
-      <div class="hero">
-        <div class="hero is-orange is-fullheight">
+      <!-- アクセス -->
+      <div class="hero" id="access">
+        <div class="hero is-red-dark is-fullheight">
           <div class="hero-body">
             <div class="container">
-              <div class="tile is-ancestor">
-                <div class="tile is-vertical">
-                  <div class="tile">
-                    <div class="tile is-parent"></div>
+              <h1 class="title has-text-white">
+                アクセス
+              </h1>
+
+              <div class="card">
+                <div class="card-image">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13129.054600126616!2d135.757263!3d34.648044!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xd4d6a42a78fc15f0!2z5Zu956uLIOWliOiJr-W3pealremrmOetieWwgumWgOWtpuagoQ!5e0!3m2!1sja!2sjp!4v1539353287835"
+                    width="100%" frameborder="0" style="border:0" allowfullscreen class="map"></iframe>
+                </div>
+
+                <div class="card-content">
+                  <div class="content">
+                    <div class="message is-danger">
+                      <div class="message-body">
+                        <i class="fas fa-exclamation-triangle is-fit" aria-hidden="true"></i>
+                        <span class="text">※校内に駐車場は設置しておりません。ご来場の際には公共交通機関等をご利用ください。</span>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
-
-              <!-- ここから -->
-              <div class="">
-                <div class="columns is-multiline is-tablet is-fullhd" id="shop">
-                  <div v-for="(value) in groups">
-                    <div class="column">
-                      <article class="message">
-                        <div class="message-header">
-                          <p>{{ value.place }}</p>
-                        </div>
-                        <div class="message-body">
-                          <p class="title">{{ value.group }}</p>
-                          <p class="subtitle">{{ value.product }}</p>
-                          <div class="content"></div>
-                        </div>
-                      </article>
+                <div class="card-content">
+                  <div class="media">
+                    <div class="media-content">
+                      <p class="title is-4">近鉄郡山駅よりお越しの場合</p>
                     </div>
+                  </div>
+
+                  <div class="content">
+                    「近鉄郡山駅」バス停より、奈良交通「大和小泉駅東口」または「矢田寺」行きバスにご乗車いただき「奈良高専」にて下車してください。
+
+                  </div>
+                </div>
+                <div class="card-content">
+                  <div class="media">
+                    <div class="media-content">
+                      <p class="title is-4">大和小泉駅よりお越しの場合</p>
+                    </div>
+                  </div>
+
+                  <div class="content">
+                    「大和小泉駅東口」バス停より、奈良交通「近鉄郡山駅」行きバスにご乗車いただき「奈良高専」にて下車してください。
                   </div>
                 </div>
               </div>
             </div>
+
+
           </div>
+  </main>
+  <footer class="footer">
+    <div class="content has-text-centered">
+      <p>
+        ©高専祭実行委員会2019<br>
+        Created by <a href="https://joken.nara-k.ac.jp">情報処理研究会</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- modal -->
+  <div class="modal" id="map1">
+    <div class="modal-background" onclick="modal_close()"></div>
+    <div class="modal-content">
+      <p class="image">
+        <div class="image">
+          <svg width="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" overflow="hidden"
+            id="map1_source" viewBox="0 0 1250 730">
+            <defs>
+              <clipPath id="clip0">
+                <path d="M8 5 1252 5 1252 733 8 733Z" fill-rule="evenodd" clip-rule="evenodd" />
+              </clipPath>
+              <image width="96" height="90"
+                xlink:href="data:image/png;base64,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"
+                preserveAspectRatio="none" id="img1"></image>
+
+              <clipPath id="clip2">
+                <path d="M0 0 49.0667 0 49.0667 46 0 46Z" fill-rule="evenodd" clip-rule="evenodd" />
+              </clipPath>
+              <clipPath id="clip3">
+                <path d="M0 0 53.3333 0 53.3333 50 0 50Z" fill-rule="evenodd" clip-rule="evenodd" />
+              </clipPath>
+              <clipPath id="clip4">
+                <path d="M0 0 49.0667 0 49.0667 46 0 46Z" fill-rule="evenodd" clip-rule="evenodd" />
+              </clipPath>
+            </defs>
+            <g clip-path="url(#clip0)" transform="translate(-8 -5)">
+              <path
+                d="M10.8528 378.5 553.5 378.5 553.5 710.829 359.065 711.5C358.32 633.244 358.416 554.987 357.671 476.731L10.8528 476.77C10.8528 427.635 10.0595 446.654 10.8528 378.5Z"
+                stroke="#000000" stroke-miterlimit="8" fill="#E7E6E6" fill-rule="evenodd" />
+              <rect x="242.5" y="90.5001" width="305" height="197" stroke="#000000" stroke-miterlimit="8"
+                fill="#92D050" />
+
+              <text font-weight="700" font-size="32" transform="translate(362.749 198)">芝生</text>
+
+              <g fill="" id="p2">
+                <rect x="308" y="7" width="61" height="58" stroke="#000000" stroke-width="4" stroke-miterlimit="8"
+                  fill="#FFFFFF" />
+                <text font-weight="400" font-size="32" transform="translate(329.392 46)" fill="">2</text>
+              </g>
+
+              <g fill="" id="p3">
+                <rect x="369" y="7" width="61" height="58" stroke="#000000" stroke-width="4" stroke-miterlimit="8"
+                  fill="#FFFFFF" />
+                <text font-weight="400" font-size="32" transform="translate(390.776 46)">3</text>
+              </g>
+
+              <g fill="" id="p4">
+                <rect x="432" y="7" width="61" height="58" stroke="#000000" stroke-width="4" stroke-miterlimit="8"
+                  fill="#FFFFFF" />
+                <text font-weight="400" font-size="32" transform="translate(453.363 46)">4</text>
+              </g>
+
+              <g fill="" id="p6">
+                <rect x="550" y="102" width="60" height="58" stroke="#000000" stroke-width="4" stroke-miterlimit="8"
+                  fill="#FFFFFF" />
+                <text font-weight="400" font-size="32" transform="translate(571.032 141)">6</text>
+              </g>
+
+              <g fill="" id="p1">
+                <rect x="245" y="7" width="61" height="58" stroke="#000000" stroke-width="4" stroke-miterlimit="8"
+                  fill="#FFFFFF" />
+                <text font-weight="400" font-size="32" transform="translate(266.488 46)">1</text>
+              </g>
+
+              <rect x="413.5" y="377.5" width="124" height="53" stroke="#000000" stroke-miterlimit="8" fill="#E7E6E6" />
+
+              <text font-weight="400" font-size="32" transform="translate(427.084 414)">出入口</text>
+
+              <g id="p8">
+                <rect x="0" y="0" width="60" height="58" stroke="#000000" stroke-width="4" stroke-miterlimit="8"
+                  fill="#FFFFFF" transform="matrix(-1 -8.74228e-08 -8.74228e-08 1 610 219)" />
+                <text font-weight="400" font-size="32" transform="translate(571.032 258)">8</text>
+              </g>
+
+              <g id="p7">
+                <rect x="0" y="0" width="61" height="58" stroke="#000000" stroke-width="4" stroke-miterlimit="8"
+                  fill="#FFFFFF" transform="matrix(-1 -8.74228e-08 -8.74228e-08 1 610 160)" />
+                <text font-weight="400" font-size="32" transform="translate(570.654 199)">7</text>
+              </g>
+
+              <path
+                d="M737.5 19.5001C829.607 19.8837 925.591 20.2672 993.293 22.9916 1062.93 25.7159 1107.2 33.6865 1150.5 46.5001"
+                stroke="#000000" stroke-miterlimit="8" fill="none" fill-rule="evenodd" />
+
+              <path
+                d="M736.5 107.138C736.5 97.6811 743.088 90.0148 751.214 90.0148L969.067 89.5001C1018.15 91.4102 1104.15 95.8321 1129.93 117.608 1155.72 139.385 1163.7 191.761 1123.77 220.157 1083.83 248.554 1062.57 283.867 890.326 287.985L751.214 288.5C743.088 288.5 736.5 280.834 736.5 271.377L736.5 107.138Z"
+                stroke="#000000" stroke-miterlimit="8" fill="#548235" fill-rule="evenodd" />
+
+              <text font-weight="700" font-size="32" transform="translate(879.099 198)">植え込み</text>
+
+              <path
+                d="M726.5 498.5 726.5 381.836C726.5 373.96 733.087 367.575 741.213 367.575L821.836 367.652 872.874 368.349C878.685 366.28 982.548 368.063 1029.14 349.741 1066.77 340.445 1146.24 302.377 1189.69 266.896 1233.14 231.416 1251.93 218.073 1251.49 257.641 1230.17 313.931 1181.03 346.412 1167.19 498.177"
+                stroke="#000000" stroke-miterlimit="8" fill="#92D050" fill-rule="evenodd" />
+
+              <path d="M944.1 396.5 1058.5 396.5 1058.5 657.5 772.5 657.5 772.5 396.5 875.574 396.69" stroke="#000000"
+                stroke-miterlimit="8" fill="#FFFFFF" fill-rule="evenodd" />
+
+              <text font-weight="400" font-size="32" transform="translate(867.08 517)">
+                駐車場
+                <tspan x="-12.3333" y="39">(</tspan>
+                <tspan x="0" y="39">工事中</tspan>
+                )
+              </text>
+
+              <g id="p18">
+                <rect x="325" y="289" width="59" height="57" stroke="#000000" stroke-width="4" stroke-miterlimit="8"
+                  fill="#FFFFFF" />
+                <text font-weight="400" font-size="32" transform="translate(336.675 327)">18</text>
+              </g>
+
+              <g id="p17">
+                <rect x="382" y="289" width="58" height="57" stroke="#000000" stroke-width="4" stroke-miterlimit="8"
+                  fill="#FFFFFF" />
+                <text font-weight="400" font-size="32" transform="translate(393.06 327)">17</text>
+              </g>
+
+              <g id="p16">
+                <rect x="440" y="289" width="58" height="57" stroke="#000000" stroke-width="4" stroke-miterlimit="8"
+                  fill="#FFFFFF" />
+                <text font-weight="400" font-size="32" transform="translate(451.449 327)">16</text>
+              </g>
+
+              <g id="p19">
+                <rect x="267" y="289" width="58" height="57" stroke="#000000" stroke-width="4" stroke-miterlimit="8"
+                  fill="#FFFFFF" />
+                <text font-weight="400" font-size="32" transform="translate(278.286 327)">19</text>
+              </g>
+
+
+              <rect x="106.5" y="378.5" width="121" height="53" stroke="#000000" stroke-miterlimit="8" fill="#E7E6E6" />
+
+              <text font-weight="400" font-size="32" transform="translate(118.179 414)">出入口</text>
+
+              <g id="p10">
+                <rect x="555" y="453" width="58" height="57" stroke="#000000" stroke-width="4" stroke-miterlimit="8"
+                  fill="#FFFFFF" />
+                <text font-weight="400" font-size="32" transform="translate(566.152 491)">10</text>
+              </g>
+
+              <g id="p12">
+                <rect x="555" y="568" width="58" height="58" stroke="#000000" stroke-width="4" stroke-miterlimit="8"
+                  fill="#FFFFFF" />
+                <text font-weight="400" font-size="32" transform="translate(566.152 607)">12</text>
+              </g>
+
+              <g id="p11">
+                <rect x="555" y="510" width="58" height="58" stroke="#000000" stroke-width="4" stroke-miterlimit="8"
+                  fill="#FFFFFF" />
+                <text font-weight="400" font-size="32" transform="translate(566.153 549)">11</text>
+              </g>
+
+              <g id="p9">
+                <rect x="0" y="0" width="58" height="58" stroke="#000000" stroke-width="4" stroke-miterlimit="8"
+                  fill="#FFFFFF" transform="matrix(-1 -8.74228e-08 -8.74228e-08 1 613 395)" />
+                <text font-weight="400" font-size="32" transform="translate(575.069 434)">9</text>
+              </g>
+
+              <g id="p15">
+                <rect x="696" y="434" width="58" height="58" stroke="#000000" stroke-width="4" stroke-miterlimit="8"
+                  fill="#FFFFFF" />
+                <text font-weight="400" font-size="32" transform="translate(706.969 473)">15</text>
+              </g>
+
+              <g id="p13">
+                <rect x="0" y="0" width="58" height="58" stroke="#000000" stroke-width="4" stroke-miterlimit="8"
+                  fill="#FFFFFF" transform="matrix(-1 -8.74228e-08 -8.74228e-08 1 754 549)" />
+                <text font-weight="400" font-size="32" transform="translate(706.969 588)">13</text>
+              </g>
+
+              <g id="p14">
+                <rect x="0" y="0" width="58" height="57" stroke="#000000" stroke-width="4" stroke-miterlimit="8"
+                  fill="#FFFFFF" transform="matrix(-1 -8.74228e-08 -8.74228e-08 1 754 492)" />
+                <text font-weight="400" font-size="32" transform="translate(706.97 530)">14</text>
+              </g>
+
+
+              <rect x="446.5" y="632.5" width="107" height="58" stroke="#000000" stroke-miterlimit="8" fill="#E7E6E6" />
+
+              <text font-weight="400" font-size="27" transform="translate(459.461 669)">出入口</text>
+
+              <g clip-path="url(#clip2)" transform="matrix(1.01902 0 -0 1 307 430)">
+                <use width="100%" height="100%" xlink:href="#img1" transform="scale(0.511111 0.511111)"></use>
+              </g>
+
+              <path d="M306.5 429.5 357.5 429.5 357.5 476.5 306.5 476.5Z" stroke="#000000" stroke-linejoin="round"
+                stroke-miterlimit="10" fill="none" fill-rule="evenodd" />
+
+              <g clip-path="url(#clip3)" transform="matrix(1.0125 0 -0 1 358 591)">
+                <use width="100%" height="100%" xlink:href="#img1" transform="scale(0.555556 0.555556)"></use>
+              </g>
+
+              <path d="M357.5 590.5 412.5 590.5 412.5 641.5 357.5 641.5Z" stroke="#000000" stroke-linejoin="round"
+                stroke-miterlimit="10" fill="none" fill-rule="evenodd" />
+
+              <rect x="104.5" y="90.5001" width="121" height="197" stroke="#787878" stroke-miterlimit="8"
+                fill="#E7E6E6" />
+
+              <path d="M625.5 655 642.75 655 642.75 571.5 677.25 571.5 677.25 655 694.5 655 660 689.5Z" stroke="#2F528F"
+                stroke-miterlimit="8" fill="#FF0000" fill-rule="evenodd" />
+
+              <text font-weight="400" font-size="27" transform="translate(568.165 709)">体育館ステージ</text>
+
+              <g id="pO">
+                <rect x="135" y="148" width="58" height="57" stroke="#000000" stroke-width="4" stroke-miterlimit="8"
+                  fill="#FFFFFF" />
+                <text font-weight="700" font-size="32" transform="translate(151.931 187)">O</text>
+              </g>
+
+              <rect x="11.5001" y="532.5" width="117" height="146" stroke="#787878" stroke-miterlimit="8"
+                fill="#E7E6E6" />
+
+              <g id="pP">
+                <rect x="41" y="573" width="58" height="57" stroke="#000000" stroke-width="4" stroke-miterlimit="8"
+                  fill="#FFFFFF" />
+                <text font-weight="700" font-size="32" transform="translate(59.0521 611)">P</text>
+              </g>
+
+              <rect x="153.5" y="476.5" width="74" height="231" stroke="#787878" stroke-miterlimit="8" fill="#E7E6E6" />
+
+              <g id="pQ">
+                <rect x="17" y="148" width="58" height="57" stroke="#000000" stroke-width="4" stroke-miterlimit="8"
+                  fill="#FFFFFF" />
+                <text font-weight="700" font-size="32" transform="translate(33.5637 187)">Q</text>
+              </g>
+
+
+              <path d="M11.5001 90.5001 94.6177 90.5002" stroke="#000000" stroke-miterlimit="8" fill="none"
+                fill-rule="evenodd" />
+
+              <path d="M0 0 0.000104987 197.964" stroke="#000000" stroke-miterlimit="8" fill="none" fill-rule="evenodd"
+                transform="matrix(1 0 0 -1 93.5001 287.464)" />
+
+              <path d="M10.5001 287.5 93.6177 287.5" stroke="#000000" stroke-miterlimit="8" fill="none"
+                fill-rule="evenodd" />
+
+              <rect x="153.5" y="560.5" width="42" height="111" stroke="#000000" stroke-miterlimit="8" fill="#E7E6E6" />
+
+              <text font-weight="400" font-size="32" transform="translate(158.071 587)">出
+                <tspan x="0" y="39">入</tspan>
+                <tspan x="0" y="77">口</tspan>
+                <tspan font-weight="700" x="219.204" y="-77">校舎</tspan>
+                <tspan font-weight="700" x="219.204" y="-38">(</tspan>
+                <tspan font-weight="700" x="232.037" y="-38">科展会場</tspan>
+                <tspan font-weight="700" x="360.037" y="-38">)</tspan>
+              </text>
+
+              <g id="p5">
+                <rect x="494" y="7" width="61" height="58" stroke="#000000" stroke-width="4" stroke-miterlimit="8"
+                  fill="#FFFFFF" />
+                <text font-weight="400" font-size="32" transform="translate(515.633 46)">5</text>
+              </g>
+
+              <g clip-path="url(#clip4)" transform="matrix(1.01902 0 -0 1 153 498)">
+                <use width="100%" height="100%" xlink:href="#img1" transform="scale(0.511111 0.511111)"></use>
+              </g>
+
+              <path d="M152.5 497.5 203.5 497.5 203.5 544.5 152.5 544.5Z" stroke="#000000" stroke-linejoin="round"
+                stroke-miterlimit="10" fill="none" fill-rule="evenodd" />
+            </g>
+
+          </svg>
         </div>
-      </div>
-    </main>
+      </p>
+    </div>
+    <button class="modal-close is-large" onclick="modal_close()"></button>
+  </div>
 
-    <footer></footer>
+  <div class="modal" id="map2">
+    <div class="modal-background" onclick="modal_close()"></div>
+    <div class="modal-content">
+      <p class="image">
+        <div class="image">
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" overflow="hidden"
+            id="map2_source" viewBox="0 0 1266 700">
+            <defs>
+              <clipPath id="clip0">
+                <path d="M8 25 1274 25 1274 704 8 704Z" fill-rule="evenodd" clip-rule="evenodd" />
+              </clipPath>
+              <image width="96" height="90"
+                xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABaCAYAAABHeVPzAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAicSURBVHhe7V1pjBRFGC0Wb7yj4rHsMt2zuzi7M6CraLxQY7ziFaPEKwZNQMTEI2qihnhh/CORRMBoUExQFIwRMF4/TPBMPPAOCRpvg4BGJIiouFXlq5lvcbfnm5nu6eoeZqyXvDDU11XVvFdnT/UgHBwcHBwcmhAd4CSi+eyQMm4DNdF8dkgZzoAGwxnQYDgDOGSzalfP0x25Tn0wtBlJyUkgFQP0xWKkOkIcqnrFGN0vdqbkHQ9dXdrLenKRn5Gbu3yti8zIH7OeurMwWo2iy2wiUQMg9j4yL+4H1+m80EX2ik2yTyxQedFOl+0YQKufBME3bRc+QN+Xn3ieOogut4XEDDCtXfaKNduFDxAm/KL6xFF0eWMB8duzvtzICT+MGbkSWrVRNhtIxAA9SewEkVcFRQ8SPeMn3S0OoGyNA4aduazgHD11NmWzgUQMwPByKSc4R/SEWZStUdAjunz5PSs2w2xGPkoZbSARA9Cyl3Jic8Qw9Tllawza29XuMGCAE5sjhqrXKKsNJGXAB5zYHHHtZjNkUdb00d+vd4YBf3Bis/TkCspqA4kYAGFfDwpdiegBG1D5CMraGKBVv82KzdFTMymbDSTVAx7gxOaIa1+ibI0DVkFXsGKXUW41KybKZgOJGIBJuActexsneJCqIM6lbI2EbsMSczkv+iCl6vbVdZTBFhIxwABr/Ns5wYcSrX8RKm7s8DOIzk69GzZbT0BoGRQfO+PfsRueTpfaRGIGGGGxGbsFPWFrmfC9YgDLz3k75GOJ7owqYF9wX5enn8WE+2Q2o25KYAc8iMQMGIQaLw7DkHQrRF+MFm+Wp3fDmMMpnD7MMx2M4znf1/02aJ4fmZUUFR8ViRigjhW76/FiLIT2qxFmeKpH7EXZkkXXWHUMWvQLGGL+DA4x8SgVhqhfsEF7aFyHOoSqCwurBqC1T8TQsoIbdioRveJvXP8GDDmHirEPDCMzuLHdOjPyZ9MrqNowsGYAhpkbIabkRA5LmPeweXRNRdpBt6eOh/ihd7qxmZE/5HJ6T6q+FqwYYJ79QHzFiRqVKOdeKtYOsLJ5kRUqQWKOmUHV10JsA9REsTeGkJ85MeshyvpH94lxVHw8mMnR9+QWTqQkiflgGd1CLcQ3IC9u4ISMQ/SCR6j4eMhk1GhOoBS4im6hFmIbgBb7ISdiHKLMjZjJ9qAq6kdPjzqUESd5ZuRHdAu1EMsAVRB9nIA2iJ30ZKqmftQwoOLXj2GIpee2isNbSgZgqAj90C0q0QtepmrqRzUDujtUBqujdVwsDM1jCzPZcrE0DDCPEbBsXMuKVyGdI4TeUJx4y9O3mZMUVF19qGaAeaqJFryWi4WiJx/Dn9PK0g1TMACT71lB0Ui4b9AzZnMxjrj2RdPauRg2Z7dQdfWhlQ2AcEs40dD6Z4FfcjGOEH8rxvtrKsQ+o+rqQ6saAHH2gzh/lAmGnTB6xmXB9FqEAdPNeSE2VhBHULXR0cIGTAsKZQgD3o4y/AwSPeYVcEGF2ByqNjpa1QCI/A4nlmnJiP3AxaoRvWkbdr8XsLG8WK9zYheqOhpa0QCVE1mIUvbcpziWF8S5wfSwRN5rK80dGNbOo+qjoRUNgPj3cCIhfQkEnM/FwhD5V6IH3cnG+sRzVH00tJoBuGgkWvo3nEimlSK2gYuFIfIOoIwTIfZAWSwv/sS+I/oRxpYzoFecHBSnKBA2Xmi9Z3OxKIQB5juFlRVi0Q8ktJoBEGchJw7SZ4OPc7EohJHvwsirKsTeo9sIj1YyABeMgMj/nfMfFAYTMnasR2MI2RiMRSXKknq8mICytjAxFfkkdcsZ0Ct+LBOmV3yI4eH8YHq9RA+4HWI/FUwvmoMNIN1OOLTcENQnZgWFgWCXI/2ZYHq9hNCfYqk7EcYOO1mH9OfpNsKj5SZh865XXsyEGKuLLb9PXI1N0p74++9DxYpLGJDDsHYGjH0L9XyB8ufWdXwFIh/ICgSaIyRxDchm1NVcLOvL9+kWaiGSARywgbqEEzEOIfg9VHxc6BFojavLRMrIrxBri2uA76te9riLJx+kG6iF2AaghS7nRIxDlLkGN2TnzChEOg4i/TYojnkDsttTpxZjMQ0wZWQ9dddQE1Dmx/kOHXayimUAViz7orX+xYlogVHON1VHZ6c+uMtXUyHQNDMvULIVAwxg8pFdnro+m9UXm0O+lBwG8QzIiykB0awRxj5A1SQHWwbEQCwDMEm+yolngyj7O9xUki+pN7cBWAGNDi4VrbMgTqDqkkF1A+Qc35dv8jGw0QbkxQxWNItEL5hH1SWDagZgCXsRTFjIxYpssAFo/W9wotkk5oH1ib5B2awGYPPVgdZZ9tg4IZ5G1dpHsxqA8f9mRqhEiF5g49/Jo1kNgCihX8SOS9T1q+4UUZbW4dGMBqiCGAVR/gJlJXJCGiLGvkNg0ofmH0bzTVmcoynV0LRzQL/Yx3xFyBHDU6GCyJ+Ay7gY8kzmyjJUObE/VWsfzWpANWB52s6JDK6CAexpOrTwMyl7unAGlOgMcAaU0xmQApwBJToDnAHldAakAGdAic4AZ0A5nQEpwBlQojPAGVBOZ0AKcAaU6AxwBpTTGZACnAElOgOcAeV0BqQAPyO/ZsUFsxl1DkSez8WKRIyKiQP7BowXh3Eig6tkn3iaSTe/inI6ZU8XWU8u4MRFz9iSa1f7+746n4sX6akLqZg4sG6ANr8jxPyIH9IWo3fcwaQPmINelD1dmP+myvflt8PFNWf91dTSFboNLX3p8HjxmudMrHRNLFg3wABDypVFYf8TeQPSuul9gtXb00vHUe6nbI2BaenmJQvz85bmV7C6PR04EazbEL/KiF6kp6cgzdax7UQMMECrnoAWPxO8EeJv/+1rfB6FtKkw4G4MV6dQ8v8WiRngEA7OgAbDGdBgjAFPIprPDg4ODg4OTQQh/gVB+7Nxz2qxPwAAAABJRU5ErkJggg=="
+                preserveAspectRatio="none" id="img1">
+              </image>
+              <clipPath id="clip2">
+                <path d="M0 0 23.6344 0 23.6344 46 0 46Z" fill-rule="evenodd" clip-rule="evenodd" />
+              </clipPath>
+              <clipPath id="clip3">
+                <path d="M0 0 24 0 24 46.3679 0 46.3679Z" fill-rule="evenodd" clip-rule="evenodd" />
+              </clipPath>
+              <clipPath id="clip4">
+                <path d="M0 0 49.0667 0 49.0667 46 0 46Z" fill-rule="evenodd" clip-rule="evenodd" />
+              </clipPath>
+              <clipPath id="clip5">
+                <path d="M0 0 49 0 49 45.9375 0 45.9375Z" fill-rule="evenodd" clip-rule="evenodd" />
+              </clipPath>
+            </defs>
 
-    <script src="js/script.js"></script>
-  </body>
+            <g clip-path="url(#clip0)" transform="translate(-8 -25)">
+              <path
+                d="M9.88982 194.5 609.5 194.5 609.5 699.794 422.69 702.5C421.866 583.514 421.91 490.838 421.087 371.852L9.88982 369.703C9.88982 294.996 9.01325 298.125 9.88982 194.5Z"
+                stroke="#000000" stroke-miterlimit="8" fill="#E7E6E6" fill-rule="evenodd" />
+              <path
+                d="M670.89 194.5 1270.5 194.5 1270.5 699.773C1208.23 700.674 1144.94 702.598 1082.67 703.5 1081.84 584.519 1082.4 491.336 1081.58 372.355L670.89 369.696C670.89 294.992 670.013 298.121 670.89 194.5Z"
+                stroke="#000000" stroke-miterlimit="8" fill="#E7E6E6" fill-rule="evenodd" />
+              <text font-weight="400" font-size="48" transform="translate(296.085 171)">
+
+                3<tspan x="26.6667" y="0">
+                  階</tspan>
+
+                <tspan x="635.905" y="-10">
+                  2</tspan>
+
+                <tspan x="662.571" y="-10">
+                  階</tspan>
+              </text>
+
+              <g id="pK">
+                <rect x="0" y="0" width="68" height="81" stroke="#000000" stroke-width="4" stroke-miterlimit="8"
+                  fill="#FFFFFF" transform="matrix(-1 -8.74228e-08 -8.74228e-08 1 215 196)" />
+                <text font-weight="700" font-size="32" transform="translate(169.951 246)">
+                  K</text>
+              </g>
+
+              <g id="pL">
+                <rect x="0" y="0" width="68" height="81" stroke="#000000" stroke-width="4" stroke-miterlimit="8"
+                  fill="#FFFFFF" transform="matrix(-1 -8.74228e-08 -8.74228e-08 1 285 196)" />
+                <text font-weight="700" font-size="32" transform="translate(240.711 246)">
+                  L</text>
+              </g>
+
+              <g id="pM">
+                <rect x="0" y="0" width="68" height="81" stroke="#000000" stroke-width="4" stroke-miterlimit="8"
+                  fill="#FFFFFF" transform="matrix(-1 -8.74228e-08 -8.74228e-08 1 354 196)" />
+                <text font-weight="700" font-size="32" transform="translate(304.559 246)">
+                  M</text>
+              </g>
+
+              <g id="pN">
+                <rect x="0" y="0" width="68" height="81" stroke="#000000" stroke-width="4" stroke-miterlimit="8"
+                  fill="#FFFFFF" transform="matrix(-1 -8.74228e-08 -8.74228e-08 1 422 196)" />
+                <text font-weight="700" font-size="32" transform="translate(375.513 246)">
+                  N</text>
+              </g>
+
+              <g id="pA">
+                <rect x="0" y="0" width="87" height="124" stroke="#000000" stroke-width="4" stroke-miterlimit="8"
+                  fill="#FFFFFF" transform="matrix(-1 -8.74228e-08 -8.74228e-08 1 759 196)" />
+                <text font-weight="700" font-size="32" transform="translate(704.276 268)">
+                  A</text>
+              </g>
+
+              <g id="pB">
+                <rect x="0" y="0" width="68" height="78" stroke="#000000" stroke-width="4" stroke-miterlimit="8"
+                  fill="#FFFFFF" transform="matrix(-1 -8.74228e-08 -8.74228e-08 1 864 196)" />
+                <text font-weight="700" font-size="32" transform="translate(818.515 245)">
+                  B</text>
+              </g>
+
+              <g id="pC">
+                <rect x="0" y="0" width="68" height="78" stroke="#000000" stroke-width="4" stroke-miterlimit="8"
+                  fill="#FFFFFF" transform="matrix(-1 -8.74228e-08 -8.74228e-08 1 933 196)" />
+                <text font-weight="700" font-size="32" transform="translate(887.446 245)">
+                  C</text>
+              </g>
+
+              <g id="pD">
+                <rect x="0" y="0" width="68" height="78" stroke="#000000" stroke-width="4" stroke-miterlimit="8"
+                  fill="#FFFFFF" transform="matrix(-1 -8.74228e-08 -8.74228e-08 1 1002 196)" />
+                <text font-weight="700" font-size="32" transform="translate(955.711 245)">
+                  D</text>
+              </g>
+
+              <g id="pG">
+                <rect x="0" y="0" width="93" height="78" stroke="#000000" stroke-width="4" stroke-miterlimit="8"
+                  fill="#FFFFFF" transform="matrix(-1 -8.74228e-08 -8.74228e-08 1 1268 429)" />
+                <text font-weight="700" font-size="32" transform="translate(1209.12 478)">
+                  G</text>
+              </g>
+
+              <g id="pF">
+                <rect x="0" y="0" width="93" height="78" stroke="#000000" stroke-width="4" stroke-miterlimit="8"
+                  fill="#FFFFFF" transform="matrix(-1 -8.74228e-08 -8.74228e-08 1 1268 350)" />
+                <text font-weight="700" font-size="32" transform="translate(1211.38 399)">
+                  F</text>
+              </g>
+
+              <g id="pE">
+                <rect x="0" y="0" width="93" height="78" stroke="#000000" stroke-width="4" stroke-miterlimit="8"
+                  fill="#FFFFFF" transform="matrix(-1 -8.74228e-08 -8.74228e-08 1 1268 273)" />
+                <text font-weight="700" font-size="32" transform="translate(1211.28 322)">
+                  E</text>
+              </g>
+              <rect x="0" y="0" width="93" height="78" stroke="#000000" stroke-width="4" stroke-miterlimit="8"
+                fill="#FFFFFF" transform="matrix(-1 -8.74228e-08 -8.74228e-08 1 1268 195)" />
+              <text font-weight="700" font-size="32" transform="translate(1189.56 244)">
+                本部</text>
+
+              <g id="pH">
+                <rect x="0" y="0" width="187" height="112" stroke="#000000" stroke-width="4" stroke-miterlimit="8"
+                  fill="#FFFFFF" transform="matrix(-1 -8.74228e-08 -8.74228e-08 1 1270 590)" />
+                <text font-weight="700" font-size="32" transform="translate(1163.89 656)">
+                  H</text>
+              </g>
+
+              <g clip-path="url(#clip2)" transform="matrix(1.01547 0 -0 1 391 324)">
+                <use width="100%" height="100%" xlink:href="#img1" transform="scale(0.511111 0.511111)">
+                </use>
+              </g>
+              <path d="M390.5 323.5 415.5 323.5 415.5 370.5 390.5 370.5Z" stroke="#000000" stroke-linejoin="round"
+                stroke-miterlimit="10" fill="none" fill-rule="evenodd" />
+              <g clip-path="url(#clip3)" transform="matrix(1 0 -0 1.01363 1049 325)">
+                <use width="100%" height="100%" xlink:href="#img1" transform="scale(0.515198 0.515198)">
+                </use>
+              </g>
+              <path d="M1048.5 324.5 1073.5 324.5 1073.5 372.5 1048.5 372.5Z" stroke="#000000" stroke-linejoin="round"
+                stroke-miterlimit="10" fill="none" fill-rule="evenodd" />
+              <rect x="421.5" y="372.5" width="74" height="62" stroke="#000000" stroke-miterlimit="8" fill="#F2F2F2" />
+              <path d="M0 0 55.4704 0.000104987" stroke="#000000" stroke-width="2" stroke-miterlimit="8" fill="#F2F2F2"
+                fill-rule="evenodd" transform="matrix(-1 -8.74228e-08 -8.74228e-08 1 494.47 403)" />
+              <path d="M0 0 0.684619 62.7127" stroke="#000000" stroke-miterlimit="8" fill="#F2F2F2" fill-rule="evenodd"
+                transform="matrix(1 -0 -0 -1 482.5 435.213)" />
+              <path d="M0 0 0.684619 62.7127" stroke="#000000" stroke-miterlimit="8" fill="#F2F2F2" fill-rule="evenodd"
+                transform="matrix(1 -0 -0 -1 471.5 435.213)" />
+              <path d="M0 0 0.684619 62.7127" stroke="#000000" stroke-miterlimit="8" fill="#F2F2F2" fill-rule="evenodd"
+                transform="matrix(1 -0 -0 -1 459.5 435.213)" />
+              <path d="M450.5 403.856 450.5 372.5" stroke="#000000" stroke-miterlimit="8" fill="#F2F2F2"
+                fill-rule="evenodd" />
+              <path d="M439.709 403.856 439.5 372.5" stroke="#000000" stroke-miterlimit="8" fill="#F2F2F2"
+                fill-rule="evenodd" />
+              <rect x="1082.5" y="372.5" width="74" height="63" stroke="#000000" stroke-miterlimit="8" fill="#F2F2F2" />
+              <path d="M0 0 55.4704 0.000104987" stroke="#000000" stroke-width="2" stroke-miterlimit="8" fill="#F2F2F2"
+                fill-rule="evenodd" transform="matrix(-1 -8.74228e-08 -8.74228e-08 1 1155.47 404)" />
+              <path d="M0 0 0.684619 62.7127" stroke="#000000" stroke-miterlimit="8" fill="#F2F2F2" fill-rule="evenodd"
+                transform="matrix(1 -0 -0 -1 1143.5 435.213)" />
+              <path d="M0 0 0.684619 62.7127" stroke="#000000" stroke-miterlimit="8" fill="#F2F2F2" fill-rule="evenodd"
+                transform="matrix(1 -0 -0 -1 1132.5 435.213)" />
+              <path d="M0 0 0.684619 62.7127" stroke="#000000" stroke-miterlimit="8" fill="#F2F2F2" fill-rule="evenodd"
+                transform="matrix(1 -0 -0 -1 1120.5 435.213)" />
+              <path d="M1111.5 403.856 1111.5 372.5" stroke="#000000" stroke-miterlimit="8" fill="#F2F2F2"
+                fill-rule="evenodd" />
+              <path d="M1100.71 403.856 1100.5 372.5" stroke="#000000" stroke-miterlimit="8" fill="#F2F2F2"
+                fill-rule="evenodd" />
+              <rect x="111.5" y="307.5" width="74" height="63" stroke="#000000" stroke-miterlimit="8" fill="#F2F2F2" />
+              <path d="M0 0 55.4704 0.000104987" stroke="#000000" stroke-width="2" stroke-miterlimit="8" fill="none"
+                fill-rule="evenodd" transform="matrix(1 -0 -0 -1 111 338)" />
+              <path d="M0 0 0.684619 62.7127" stroke="#000000" stroke-miterlimit="8" fill="none" fill-rule="evenodd"
+                transform="matrix(-1 -8.74228e-08 -8.74228e-08 1 124.185 307.5)" />
+              <path d="M0 0 0.684619 62.7127" stroke="#000000" stroke-miterlimit="8" fill="none" fill-rule="evenodd"
+                transform="matrix(-1 -8.74228e-08 -8.74228e-08 1 136.185 307.5)" />
+              <path d="M0 0 0.684619 62.7127" stroke="#000000" stroke-miterlimit="8" fill="none" fill-rule="evenodd"
+                transform="matrix(-1 -8.74228e-08 -8.74228e-08 1 147.185 307.5)" />
+              <path d="M155.5 338.5 155.5 369.856" stroke="#000000" stroke-miterlimit="8" fill="none"
+                fill-rule="evenodd" />
+              <path d="M167.5 338.5 167.709 369.856" stroke="#000000" stroke-miterlimit="8" fill="none"
+                fill-rule="evenodd" />
+              <rect x="784.5" y="307.5" width="74" height="63" stroke="#000000" stroke-miterlimit="8" fill="#F2F2F2" />
+              <path d="M0 0 55.4704 0.000104987" stroke="#000000" stroke-width="2" stroke-miterlimit="8" fill="#F2F2F2"
+                fill-rule="evenodd" transform="matrix(1 -0 -0 -1 784 338)" />
+              <path d="M0 0 0.684619 62.7127" stroke="#000000" stroke-miterlimit="8" fill="#F2F2F2" fill-rule="evenodd"
+                transform="matrix(-1 -8.74228e-08 -8.74228e-08 1 797.185 307.5)" />
+              <path d="M0 0 0.684619 62.7127" stroke="#000000" stroke-miterlimit="8" fill="#F2F2F2" fill-rule="evenodd"
+                transform="matrix(-1 -8.74228e-08 -8.74228e-08 1 809.185 307.5)" />
+              <path d="M0 0 0.684619 62.7127" stroke="#000000" stroke-miterlimit="8" fill="#F2F2F2" fill-rule="evenodd"
+                transform="matrix(-1 -8.74228e-08 -8.74228e-08 1 820.185 307.5)" />
+              <path d="M828.5 338.5 828.5 369.856" stroke="#000000" stroke-miterlimit="8" fill="#F2F2F2"
+                fill-rule="evenodd" />
+              <path d="M839.5 338.5 839.709 369.856" stroke="#000000" stroke-miterlimit="8" fill="#F2F2F2"
+                fill-rule="evenodd" />
+              <rect x="422" y="434" width="187" height="268" fill="#FFC000" fill-opacity="0.501961" />
+              <text fill="#FFFFFF" font-weight="400" font-size="24" transform="translate(443.23 576)">
+                立ち入り禁止</text>
+              <rect x="1194.5" y="514.5" width="74" height="63" stroke="#000000" stroke-miterlimit="8" fill="#F2F2F2" />
+              <path d="M0 0 55.4704 0.000104987" stroke="#000000" stroke-width="2" stroke-miterlimit="8" fill="#F2F2F2"
+                fill-rule="evenodd" transform="matrix(1 -0 -0 -1 1194 546)" />
+              <path d="M0 0 0.684619 62.7127" stroke="#000000" stroke-miterlimit="8" fill="#F2F2F2" fill-rule="evenodd"
+                transform="matrix(-1 -8.74228e-08 -8.74228e-08 1 1207.18 514.5)" />
+              <path d="M0 0 0.684619 62.7127" stroke="#000000" stroke-miterlimit="8" fill="#F2F2F2" fill-rule="evenodd"
+                transform="matrix(-1 -8.74228e-08 -8.74228e-08 1 1218.18 514.5)" />
+              <path d="M0 0 0.684619 62.7127" stroke="#000000" stroke-miterlimit="8" fill="#F2F2F2" fill-rule="evenodd"
+                transform="matrix(-1 -8.74228e-08 -8.74228e-08 1 1230.18 514.5)" />
+              <path d="M1238.5 546.5 1238.5 577.856" stroke="#000000" stroke-miterlimit="8" fill="#F2F2F2"
+                fill-rule="evenodd" />
+              <path d="M1249.5 546.5 1249.71 577.856" stroke="#000000" stroke-miterlimit="8" fill="#F2F2F2"
+                fill-rule="evenodd" />
+
+              <g id="pI">
+                <rect x="0" y="0" width="60" height="78" stroke="#000000" stroke-width="4" stroke-miterlimit="8"
+                  fill="#FFFFFF" transform="matrix(-1 -8.74228e-08 -8.74228e-08 1 782 370)" />
+                <text font-weight="700" font-size="43" transform="translate(745.268 422)">
+                  I</text>
+              </g>
+              <g clip-path="url(#clip4)" transform="matrix(1.01902 0 -0 1 10 323)">
+                <use width="100%" height="100%" xlink:href="#img1" transform="scale(0.511111 0.511111)">
+                </use>
+              </g>
+
+              <path d="M9.5 322.5 60.5 322.5 60.5 369.5 9.5 369.5Z" stroke="#000000" stroke-linejoin="round"
+                stroke-miterlimit="10" fill="none" fill-rule="evenodd" />
+
+              <g clip-path="url(#clip5)" transform="matrix(1 0 -0 1.02313 672 322)">
+                <use width="100%" height="100%" xlink:href="#img1" transform="scale(0.510417 0.510417)">
+                </use>
+              </g>
+
+              <path d="M671.5 321.5 721.5 321.5 721.5 369.5 671.5 369.5Z" stroke="#000000" stroke-linejoin="round"
+                stroke-miterlimit="10" fill="none" fill-rule="evenodd" />
+
+              <g id="pJ">
+                <rect x="0" y="0" width="87" height="125" stroke="#000000" stroke-width="4" stroke-miterlimit="8"
+                  fill="#FFFFFF" transform="matrix(-1 -8.74228e-08 -8.74228e-08 1 99 196)" />
+                <text font-weight="700" font-size="32" transform="translate(49.1425 268)">J</text>
+              </g>
+            </g>
+          </svg>
+        </div>
+      </p>
+    </div>
+  </div>
+  <script src="js/script.js"></script>
+</body>
+
 </html>
