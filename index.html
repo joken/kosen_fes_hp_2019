@@ -110,6 +110,42 @@
           </div>
         </div>
       </div>
+
+      <div class="hero">
+        <div class="hero is-orange is-fullheight">
+          <div class="hero-body">
+            <div class="container">
+              <div class="tile is-ancestor">
+                <div class="tile is-vertical">
+                  <div class="tile">
+                    <div class="tile is-parent"></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ここから -->
+              <div class="">
+                <div class="columns is-multiline is-tablet is-fullhd" id="shop">
+                  <div v-for="(value) in groups">
+                    <div class="column">
+                      <article class="message">
+                        <div class="message-header">
+                          <p>{{ value.place }}</p>
+                        </div>
+                        <div class="message-body">
+                          <p class="title">{{ value.group }}</p>
+                          <p class="subtitle">{{ value.product }}</p>
+                          <div class="content"></div>
+                        </div>
+                      </article>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
 
     <footer></footer>
