@@ -1,63 +1,119 @@
 <!DOCTYPE html>
 <html lang="ja">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>奈良高専祭2019</title>
 
     <!-- reset CSS -->
-    <link rel="stylesheet" href="./css/normalize.css" />
+    <!-- <link rel="stylesheet" href="./css/normalize.css" /> -->
 
     <!-- Bulma -->
     <link rel="stylesheet" href="./css/bulma.css" />
 
     <!-- Custom CSS -->
-    <!-- <link rel="stylesheet" href="./css/style.css" /> -->
+    <link rel="stylesheet" href="./css/style.css" />
     <!-- <link rel="stylesheet" href="./css/startup.css" /> -->
 
     <!-- Animate.css -->
     <link rel="stylesheet" href="./css/animate.css" />
-</head>
 
-<body>
-    <header>
-        <nav class="navbar is-success" role="navigation" aria-label="main navigation">
-            <div class="navbar-brand">
-                <a class="navbar-item" href="#">
-                    <p>奈良高専祭2019</p>
-                    <!-- <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28"> -->
-                </a>
+    <!-- Vue.js -->
+    <script src="js/vue.js"></script>
+  </head>
 
-                <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
-                    data-target="navbarBasicExample">
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                </a>
-            </div>
-
-            <div id="navbarBasicExample" class="navbar-menu">
-                <div class="navbar-end">
-                    <a class="navbar-item">
-                        about
-                    </a>
-
-                    <a class="navbar-item">
-                        企画
-                    </a>
-                </div>
-            </div>
-        </nav>
-    </header>
-
+  <body>
     <main>
-        <p class="title">奈良高専祭</p>
+      <div class="hero is-success is-fullheight">
+        <nav class="navbar">
+          <div class="container">
+            <nav
+              class="navbar is-success"
+              role="navigation"
+              aria-label="main navigation"
+            >
+              <div class="navbar-brand">
+                <a class="navbar-item" href="#">
+                  <p>奈良高専祭2019</p>
+                </a>
+
+                <a
+                  role="button"
+                  class="navbar-burger burger"
+                  aria-label="menu"
+                  aria-expanded="false"
+                  data-target="navbar_menu"
+                >
+                  <span aria-hidden="true"></span>
+                  <span aria-hidden="true"></span>
+                  <span aria-hidden="true"></span>
+                </a>
+              </div>
+
+              <div id="navbar_menu" class="navbar-menu">
+                <div class="navbar-end">
+                  <a class="navbar-item">
+                    about
+                  </a>
+
+                  <a class="navbar-item">
+                    企画
+                  </a>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </nav>
+
+        <div class="hero-body">
+          <div class="container has-text-centered">
+            <h1 class="title">
+              第53回奈良高専祭
+            </h1>
+            <h2 class="subtitle">未来を彩る五色の技術へ</h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero">
+        <div class="hero is-orange is-fullheight">
+          <div class="hero-body">
+            <div class="container">
+              <div class="tile is-ancestor">
+                <div class="tile is-vertical">
+                  <div class="tile">
+                    <div class="tile is-parent"></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ここから -->
+              <div class="">
+                <div class="columns is-multiline is-tablet is-fullhd" id="shop">
+                  <div v-for="(value) in groups">
+                    <div class="column">
+                      <article class="message">
+                        <div class="message-header">
+                          <p>{{ value.place }}</p>
+                        </div>
+                        <div class="message-body">
+                          <p class="title">{{ value.group }}</p>
+                          <p class="subtitle">{{ value.product }}</p>
+                          <div class="content"></div>
+                        </div>
+                      </article>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
 
     <footer></footer>
 
     <script src="js/script.js"></script>
-</body>
-
+  </body>
 </html>

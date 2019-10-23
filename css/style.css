@@ -1,21 +1,21 @@
 @charset "UTF-8";
 
 * {
-  --red: #E3170A;
-  --white: #FDFFFC;
-  --black: #3C3744;
-  --green: #8EA604;
-  --orange: #FF9F1C;
-  --blue: #2364AA;
+  --red: #e3170a;
+  --white: #fdfffc;
+  --black: #3c3744;
+  --green: #8ea604;
+  --orange: #ff9f1c;
+  --blue: #2364aa;
 
   /* 余白設定 */
-  margin: 0;
+  /* margin: 0; */
 }
 
 html {
   /* height: 100%; */
   color: --var(--black);
-  font-size: 100%;
+  /* font-size: 100%; */
   font-family: "Noto Sans JP";
   /* font-family: "M PLUS Rounded 1c"; */
   /* font-family: "M PLUS 1p"; */
@@ -26,16 +26,6 @@ body {
   background-color: var(--white);
 }
 
-
-.hero {
-  min-height: 100vh;
-}
-.hero-header {
-  height: 5vh;
-}
-.hero-body {
-  height: 95vh;
-}
 /* color */
 .is-dark {
   background-color: var(--black);
@@ -62,15 +52,6 @@ body {
   background-color: var(--orange);
 }
 
-
-
-/* contents */
-.container {
-  display: flex;
-  /* align-items: center; */
-  /* flex-direction: column; */
-}
-
 /* Main Page */
 /* 円形 */
 .pie {
@@ -88,8 +69,7 @@ body {
   background-color: violet;
 }
 
-
-/* font */
-.title {
-  font-size: 10vw;
-}
+/* .main_title {
+  font-size: 30px;
+  text-align: center;
+} */

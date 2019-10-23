@@ -21,3 +21,22 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
+// 記事を読み込む
+fetch("json/shop.json")
+  .then(function(response) {
+    return response.json();
+  })
+  .then(function(myJson) {
+    console.log(JSON.stringify(myJson));
+    initVue(myJson);
+  });
+
+function initVue(data) {
+  new Vue({
+    el: "#shop",
+    data: {
+      groups: data["fes"]
+    }
+  });
+}

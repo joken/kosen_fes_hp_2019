@@ -1,0 +1,120 @@
+{
+  "fes": [
+    {
+      "place": "1",
+      "group": "陸上競技部",
+      "product": "ハムカツ",
+      "contents": []
+    },
+    {
+      "place": "2",
+      "group": "卓球部",
+      "product": "チェロス",
+      "contents": []
+    },
+    {
+      "place": "3",
+      "group": "硬式テニス部",
+      "product": "焼き鳥",
+      "contents": []
+    },
+    {
+      "place": "4",
+      "group": "ハンドボール部",
+      "product": "ミルクせんべい",
+      "contents": []
+    },
+    {
+      "place": "6",
+      "group": "バレーボール部",
+      "product": "フランクフルト",
+      "contents": []
+    },
+    {
+      "place": "7",
+      "group": "4I",
+      "product": "タピオカジュース",
+      "contents": []
+    },
+    {
+      "place": "8",
+      "group": "バスケットボール部",
+      "product": "からあげ",
+      "contents": []
+    },
+    {
+      "place": "9",
+      "group": "高専祭実行委員会",
+      "product": "500mlペットボトル",
+      "contents": []
+    },
+    {
+      "place": "10",
+      "group": "水泳部",
+      "product": "ぶっかけうどん",
+      "contents": []
+    },
+    {
+      "place": "11",
+      "group": "ソフトテニス部",
+      "product": "コロッケ",
+      "contents": []
+    },
+    {
+      "place": "12",
+      "group": "4E",
+      "product": "あげギョウザ",
+      "contents": []
+    },
+    {
+      "place": "13",
+      "group": "硬式野球部",
+      "product": "ワッフル",
+      "contents": []
+    },
+    {
+      "place": "14",
+      "group": "剣道部",
+      "product": "ホットク",
+      "contents": []
+    },
+    {
+      "place": "15",
+      "group": "弓道部",
+      "product": "チーズドッグ",
+      "contents": []
+    },
+    {
+      "place": "16",
+      "group": "アーチェリー部",
+      "product": "じゃがバター",
+      "contents": []
+    },
+    {
+      "place": "17",
+      "group": "生協学生同好会",
+      "product": "スーパーボールすくい",
+      "contents": []
+    },
+    {
+      "place": "18",
+      "group": "3C",
+      "product": "ホットドッグ",
+      "contents": []
+    },
+    {
+      "place": "19",
+      "group": "専攻科",
+      "product": "ドリップコーヒー",
+      "contents": []
+    }
+  ],
+  "fess": [
+    {
+      "place": "",
+      "group": "弓道部",
+      "product": "フライドポテト",
+      "contents": []
+    }
+  ]
+}
