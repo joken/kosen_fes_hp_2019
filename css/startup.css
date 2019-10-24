@@ -26,32 +26,32 @@
   --animation-time: 5s;
 }
 .c-circle__1 {
-  /* animation: one var(--animation-time); */
-  /* -webkit-animation: one var(--animation-time); */
+  animation: one var(--animation-time) infinite;
+  -webkit-animation: one var(--animation-time);
   stroke-dasharray: 20, 80, 0, 0;
   stroke: #e24e1b;
 }
 .c-circle__2 {
-  /* animation: two var(--animation-time); */
-  /* -webkit-animation: two var(--animation-time); */
+  animation: two var(--animation-time) infinite;
+  -webkit-animation: two var(--animation-time);
   stroke-dasharray: 0, 20, 20, 60;
   stroke: #ff9f1c;
 }
 
 .c-circle__3 {
-  /* animation: three var(--animation-time); */
+  animation: three var(--animation-time) infinite;
   stroke-dasharray: 0, 40, 20, 40;
   stroke: #73bfb8;
 }
 
 .c-circle__4 {
-  /* animation: four var(--animation-time); */
+  animation: four var(--animation-time) infinite;
   stroke-dasharray: 0, 60, 20, 20;
   stroke: #3da5d9;
 }
 
 .c-circle__5 {
-  /* animation: five var(--animation-time); */
+  animation: five var(--animation-time) infinite;
   stroke-dasharray: 0, 80, 20, 0;
   stroke: #2364aa;
 }
@@ -74,7 +74,7 @@
   }
   25%,
   100% {
-    stroke-dasharray: 14.285, 85.715, 0, 0;
+    stroke-dasharray: 20, 80, 0, 0;
   }
 }
 
@@ -84,7 +84,7 @@
   }
   50%,
   100% {
-    stroke-dasharray: 0, 14.285, 14.285, 71.425;
+    stroke-dasharray: 0, 20, 20, 60;
   }
 }
 
@@ -94,7 +94,7 @@
   }
   50%,
   100% {
-    stroke-dasharray: 0, 28.57, 14.285, 57.14;
+    stroke-dasharray: 0, 40, 20, 40;
   }
 }
 @keyframes four {
@@ -103,7 +103,7 @@
   }
   50%,
   100% {
-    stroke-dasharray: 0, 42.855, 14.285, 42.86;
+    stroke-dasharray: 0, 60, 20, 20;
   }
 }
 
@@ -113,27 +113,6 @@
   }
   50%,
   100% {
-    stroke-dasharray: 0, 57.14, 14.285, 28.57;
-  }
-}
-
-@keyframes six {
-  0% {
-    stroke-dasharray: 0, 0, 0, 100;
-  }
-  50%,
-  100% {
-    stroke-dasharray: 0, 71.425, 14.285, 14.285;
-  }
-}
-
-@keyframes seven {
-  0% {
-    stroke-dasharray: 0, 0, 0, 100;
-  }
-  50%,
-  100% {
-    /* stroke-dasharray: 0, calc(100/7*6), calc(100/7), 0; */
-    stroke-dasharray: 0, 85.715, 14.285, 0;
+    stroke-dasharray: 0, 80, 20, 0;
   }
 }
