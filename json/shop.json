@@ -283,5 +283,19 @@
         "title": "軽音部　アウトライブ"
       }
     ]
-  }
+  },
+  "images": [
+    {
+      "src": "./images/IMG_3138.jpg"
+    },
+    {
+      "src": "./images/IMG_3103.jpg"
+    },
+    {
+      "src": "./images/IMG_3183.jpg"
+    },
+    {
+      "src": "./images/IMG_3280.jpg"
+    }
+  ]
 }
