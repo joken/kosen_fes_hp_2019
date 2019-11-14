@@ -8,7 +8,8 @@
   --green: #8ea604;
   --orange: #ff9f1c;
   --blue: #2364aa;
-  --purple: #8e44ad;
+  --purple: #8e44ad;;
+  --water_blue: #5bc0de;
 
   /* 余白設定 */
   /* margin: 0; */
@@ -21,6 +22,7 @@ html {
   font-family: "Noto Sans JP";
   /* font-family: "M PLUS Rounded 1c"; */
   /* font-family: "M PLUS 1p"; */
+  scroll-behavior: smooth;
 }
 
 body {

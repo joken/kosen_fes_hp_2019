@@ -78,8 +78,48 @@
           <p class="has-text-white" style="font-size: 20px">11月2日(土) 10:00 ~ 16:00</p>
           <p class="has-text-white" style="font-size: 20px">&emsp;&emsp;3日(日) 10:00 ~ 15:30</p>
 
-          <br><br>
 
+          <br><br>
+          <div class="has-text-centered columns">
+            <article class="message is-info column is-one-quarter" style="background-color: var(--green)">
+            </article>
+            <div class=" column is-half">
+              <article class="message is-info">
+                <div class="message-body">
+                  <p class="subtitle is-3" style="color: var(--blue)">ご来場ありがとうございました！</p>
+                  <div class="content">
+                    <a href="#img">> 当日の様子</a>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+
+
+
+        </div>
+      </div>
+    </div>
+
+    <div class="hero" id="img">
+      <div class="hero is-fullheight" style="background-color: var(--water_blue);">
+        <div class="hero-body">
+          <div class="container">
+            <h1 class="title has-text-black">
+              当日の様子
+            </h1>
+
+            <!-- ここから -->
+            <div class="columns is-multiline">
+              <div v-for="(value) in img" class="column is-harf-desktop is-half-tablet">
+                <div class="card">
+                  <div class="card-image">
+                    <img :src="value.src" :alt="value.src">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
