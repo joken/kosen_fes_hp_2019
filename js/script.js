@@ -19,11 +19,13 @@ function modal_close() {
 }
 
 // 記事を読み込む
-fetch("json/shop.json")
-  .then(function (response) {
+fetch("json/shop.json", {
+  mode: "cors"
+})
+  .then(function(response) {
     return response.json();
   })
-  .then(function (myJson) {
+  .then(function(myJson) {
     // console.log(JSON.stringify(myJson));
     initVue(myJson);
   });
@@ -44,7 +46,7 @@ function initVue(data) {
       img: data["images"]
     },
     methods: {
-      open: function (map, place) {
+      open: function(map, place) {
         modal_open(map, place);
       }
     }
@@ -52,7 +54,7 @@ function initVue(data) {
 }
 
 // ブラウザ判定
-window.onload = function () {
+window.onload = function() {
   var userAgent = window.navigator.userAgent;
   if (userAgent.indexOf("MSIE") != -1 || !!document.documentMode == true) {
     console.log("IEでのアクセスは規制されています");
