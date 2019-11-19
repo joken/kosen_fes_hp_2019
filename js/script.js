@@ -53,7 +53,7 @@ function initVue() {
       img: site_data["images"]
     },
     methods: {
-      open: function(map, place) {
+      open: function (map, place) {
         modal_open(map, place);
       }
     }
@@ -61,7 +61,7 @@ function initVue() {
 }
 
 // ブラウザ判定
-window.onload = function() {
+window.onload = function () {
   var userAgent = window.navigator.userAgent;
   console.log(userAgent);
 
@@ -72,7 +72,8 @@ window.onload = function() {
   ) {
     console.log("IEでのアクセスは規制されています");
 
-    document.getElementsByTagName("head")[0].remove();
+    let head = document.getElementsByTagName('head')[0];
+    head.parentNode.removeChild(head);
     var body = document.getElementsByTagName("body");
     body[0].innerHTML =
       '\
